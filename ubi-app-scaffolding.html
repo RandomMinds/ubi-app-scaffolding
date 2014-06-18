@@ -1,0 +1,99 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+Element providing solution to no problem in particular.
+
+##### Example
+
+    <ubi-app-scaffolding></ubi-app-scaffolding>
+
+@element ubi-app-scaffolding
+@blurb Ubiquim Responsive Web App Infrastructure.
+@status alpha
+@homepage https://github.com/RandomMinds/ubiquim/components/polymer/ubi-app-scaffolding
+-->
+<polymer-element name="ubi-app-scaffolding" attributes="notitle author">
+
+  <template>
+
+    <link rel="stylesheet" href="ubi-app-scaffolding.css" />
+    
+        <header>
+             <h1>Responsive Layout using Flexbox</h1>
+        
+        </header>
+        <header>
+             <h1>Alternate Header</h1>
+        
+        </header>
+        <div id="main">
+            <nav>nav</nav>
+            <aside>aside</aside>
+            <article>
+                <p>Kitty ipsum dolor sit amet, sunbathe claw bat puking, stretching feed me eat catnip fluffy fur claw sleep in the sink sleep in the sink. Hiss hairball fluffy fur lick biting, run eat the grass chase the red dot attack your ankles meow. Rip the couch catnip run meow stuck in a tree, sleep on your face stretching lick climb the curtains purr jump on the table jump on the table. Sleep in the sink feed me sniff give me fish toss the mousie, I don't like that food eat eat knock over the lamp scratched chase the red dot.</p>
+                <p>Attack your ankles puking chase the red dot lay down in your way, knock over the lamp sunbathe eat the grass sleep on your keyboard jump sleep in the sink shed everywhere. Jump on the table sleep on your keyboard jump on the table scratched sunbathe judging you, give me fish climb the curtains sleep on your face sleep in the sink bat sniff. Knock over the lamp jump sleep in the sink tail flick, sleep in the sink I don't like that food sleep on your face rip the couch bat sleep on your keyboard toss the mousie.</p>hello!</article>
+        </div>
+        <footer>Footer</footer>
+        <footer>Footer</footer>
+
+  </template>
+
+  <script>
+
+    Polymer('ubi-app-scaffolding', {
+      /**
+       * The `author` attribute sets an initial author
+       * 
+       * @attribute author
+       * @type string
+       */
+      author: 'Gregory J Lamoree',
+      
+      /**
+       * `fancy` is a property that does something fancy.
+       * 
+       * @property fancy
+       * @type bool
+       */
+      fancy: false,
+
+      ready: function() {
+        // Ready is a lifecycle callback.
+        // You can do setup work in here.
+        // More info: http://www.polymer-project.org/docs/polymer/polymer.html#lifecyclemethods
+      },
+
+      /**
+       * The `sayHello` method will return a greeting
+       * 
+       * @method sayHello
+       * @return {String} Returns a string greeting.
+       * @param {String} greeting Pass in a specific greeting
+       */
+      sayHello: function(greeting) {
+        var response = greeting || 'Hello World!';
+        return 'ubi-app-scaffolding says, ' + response;
+      },
+
+      /**
+       * The `ubi-app-scaffolding-lasers-success` event is fired whenever we
+       * call fireLasers.
+       * 
+       * @event ubi-app-scaffolding-lasers-success
+       */
+
+      /**
+       * The `fireLasers` method will fire the lasers. At least
+       * it will dispatch an event that claims lasers were fired :)
+       * 
+       * @method fireLasers
+       */
+      fireLasers: function() {
+        this.fire('ubi-app-scaffolding-lasers-success', { sound: 'Pew pew pew!' });
+      }
+
+    });
+
+  </script>
+
+</polymer-element>

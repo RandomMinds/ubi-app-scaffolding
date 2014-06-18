@@ -1,0 +1,152 @@
+﻿:host {
+  display: block;
+}
+
+/* To ensure your styling works under the Shadow DOM polyfill, see
+   www.polymer-project.org/docs/polymer/styling.html#directives */
+polyfill-next-selector { content: ':host > h2'; }
+::content h2 {
+  color: blue;
+}
+
+
+/* Required CSS */
+ * {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+/*  @media all and (min-width: 50em) {
+  .column {
+        float: left;
+        width: 50%;
+    }
+  */
+ #main {
+    margin: 0;
+    padding: 0;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row;
+    flex-flow: row;
+}
+header, footer, .header, .footer, .header > nav, .footer > nav, #main > article, #main > nav, #main > aside {
+    margin: 4px;
+    padding: 1em;
+}
+.header, .footer {
+    margin: 0px;
+    padding: 0em;
+    width: 100%;
+    display: block;
+}
+#main > article {
+    width: 60%;
+    -webkit-flex: 4 1 0;
+    flex: 4 1 0;
+}
+#main > nav, #main > aside {
+    width: 20%;
+    -webkit-flex: 1 6 0;
+    flex: 1 6 0;
+}
+.header > nav, .footer > nav, #main > nav: {
+    display: block;
+    width: 100%;
+}
+#main > nav {
+    -webkit-order: 1;
+    order: 1;
+}
+#main > article {
+    -webkit-order: 2;
+    order: 2;
+}
+#main > aside {
+    -webkit-order: 3;
+    order: 3;
+}
+header, footer {
+    display: block;
+    min-height: 80px;
+}
+#main > article {
+    -webkit-columns: 20em;
+    -moz-columns: 20em;
+    columns: 20em;
+}
+/*}*/
+
+/* Too narrow to support three columns */
+
+/* Mobile First */
+
+/*
+  @media all and (min-width: 50em) {
+  .column {
+        float: left;
+        width: 50%;
+    }
+*/
+ @media all and (max-width: 45em) {
+    #main, #page {
+        -webkit-flex-flow: column;
+        flex-flow: column;
+    }
+    #main > nav {
+        -webkit-order: 1;
+        order: 1;
+    }
+    #main > article {
+        -webkit-order: 2;
+        order: 2;
+    }
+    #main > aside {
+        -webkit-order: 3;
+        order: 3;
+    }
+    #main > nav, #main > aside, footer {
+        min-height: 50px;
+    }
+    .header, .footer, .header > nav, .footer > nav, header, footer, #main > article, #main > nav, #main > aside {
+        margin: 0px;
+        padding: 5px;
+        width: 100%;
+    }
+    body {
+        margin: 0px;
+        font-size: 1.2em/1.3em;
+    }
+    .footer, .header, header {
+        max-height: 1em;
+    }
+}
+*/
+/* Optional CSS */
+ body {
+    xmargin: 1em;
+    font: 1.2em/1.3em'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Roboto-Light', 'Roboto Light', 'Roboto', 'Segoe UI Web Light', 'Segoe UI Light', 'Segoe UI Web Regular', 'Segoe UI', Helvetica, Arial, sans-serif;
+    color: #fff;
+}
+h1 {
+    font-weight: normal;
+    text-align: center;
+}
+p {
+    margin: 0 0 1em 0;
+}
+header {
+    background: #633;
+}
+footer {
+    background: #c66;
+}
+#main > article {
+    background: #996;
+}
+.header > nav, .footer > nav, #main > nav, #main > aside {
+    background: #663;
+}

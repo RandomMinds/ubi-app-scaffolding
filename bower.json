@@ -1,0 +1,20 @@
+{
+  "name": "ubi-app-scaffolding",
+  "version": "0.0.0",
+  "authors": [
+    "Anonymous <anonymous@example.com>"
+  ],
+  "description": "Ubiquim Responsive Web App Infrastructure",
+  "keywords": "ubiquim, polymer, web-components, infrastructure",
+  "main": "ubi-app-scaffolding.html",
+  "license": "MIT",
+  "homepage": "https://github.com/RandomMinds/ubiquim/components/polymer/ubi-app-scaffolding/",
+  "ignore": [
+    "**/.*"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.2.4",
+    "chai": "~1.9.1",
+    "mocha": "~1.19.0"
+  }
+}
